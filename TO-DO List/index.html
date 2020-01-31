@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<title>TODO App</title>
+<link rel="stylesheet" type="text/css" href="styles/main.css">
+<body>
+
+
+  <div class="app_wrap">
+    <div class="app_wrap__header">
+      <div class="add_task_block">
+        <h1>TODO App</h1>
+        <input type="text" id="new_task" placeholder="New task">
+        <input type="date" id="deadlineArea">
+        <span id="add_button">Add task</span>
+
+        <div class="filters_block">
+          <select id="filter-selector">
+            <option>All tasks</option>
+            <option>Done</option>
+            <option>Undone</option>
+          </select>
+          <select id="date_filter">
+            <option>Any deadline</option>
+            <option>Tomorrow</option>
+            <option>Next week</option>
+          </select>
+        </div>
+      </div>
+
+      
+    </div>
+    <div class="tasks_block">
+      <ul id="tasklist"></ul>
+    </div>
+  </div>
+
+
+</body>
+<script src="/index.js"></script>
+</html>

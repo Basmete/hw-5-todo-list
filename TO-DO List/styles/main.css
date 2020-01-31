@@ -1,0 +1,186 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Shrek;
+  src: url(/fonts/3375.ttf);
+  /* Путь к файлу со шрифтом */
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Shrek;
+  color: #55f355;
+  letter-spacing: 5px;
+}
+
+.app_wrap {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/img/swarm.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+.hidden {
+  display: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.app_wrap {
+  width: 100%;
+}
+.app_wrap__header {
+  display: flex;
+}
+
+.add_task_block {
+  margin: 0 auto;
+  width: 900px;
+  background-color: transparent;
+}
+
+.tasks_block {
+  margin: 0 auto;
+  width: 900px;
+  background-color: yellow;
+}
+
+.close {
+  float: right;
+  margin: 0;
+}
+.close:hover {
+  color: #2b792b;
+}
+
+.time {
+  margin: 0px 40px;
+  float: right;
+  color: #55f355;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 15px 10px 15px 50px;
+  background: #E67517;
+  font-size: 18px;
+  user-select: none;
+}
+ul li:nth-child(odd) {
+  background: #da690d;
+}
+ul li.hidden {
+  display: none;
+}
+ul li.completed {
+  background: #c25392;
+  color: #5a2d08;
+  text-decoration: line-through;
+  z-index: 10;
+}
+ul li.completed::before {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  background-image: url("../img/done.png");
+}
+
+select {
+  height: 50px;
+  width: 220px;
+  border: none;
+  font-size: 20px;
+  font-family: Shrek;
+  padding: 10px;
+  background: #F5F5F5;
+  color: #55f355;
+  border-radius: 10px;
+  margin: 10px 10px;
+  cursor: pointer;
+  background: #E67517;
+}
+
+#add_button {
+  padding: 10px;
+  width: 100px;
+  border-radius: 10px;
+  background: #d9d9d9;
+  color: #55f355;
+  float: right;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.5s;
+  background: #E67517;
+}
+#add_button:hover {
+  background-color: red;
+}
+
+input {
+  border: none;
+  height: 30px;
+  margin-left: 10px;
+  color: #55f355;
+  font-family: Shrek;
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  background: #F5F5F5;
+  float: left;
+  font-size: 16px;
+  background: #E67517;
+}
+
+label {
+  width: 100%;
+}
+
+.add_task_block {
+  text-align: center;
+}
+.add_task_block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#deadline {
+  border-radius: 0 10px 10px 0;
+  width: 15%;
+}
+
+::-webkit-input-placeholder {
+  color: #55f355;
+}
+
+::-moz-placeholder {
+  color: #55f355;
+}
+
+/* Firefox 19+ */
+:-moz-placeholder {
+  color: #55f355;
+}
+
+/* Firefox 18- */
+:-ms-input-placeholder {
+  color: #55f355;
+}
+
+/*# sourceMappingURL=main.css.map */

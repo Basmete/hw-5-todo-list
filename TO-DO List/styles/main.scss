@@ -1,0 +1,186 @@
+$shrek: #55f355;
+
+@font-face {
+  font-family: Shrek; 
+  src: url(/fonts/3375.ttf); /* Путь к файлу со шрифтом */
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Shrek;
+  color: $shrek;
+  letter-spacing: 5px;
+}
+
+.app_wrap {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/img/swarm.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+.hidden {
+  display: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.app_wrap {
+  width: 100%;
+
+  &__header {
+    display: flex;
+  }
+}
+
+.add_task_block {
+  margin: 0 auto;
+  width: 900px;
+  background-color: transparent;
+}
+
+.tasks_block {
+  margin: 0 auto;
+  width: 900px;
+  background-color: yellow;
+
+}
+
+.close {
+  float: right;
+  margin: 0;
+
+  &:hover {
+    color: rgb(43, 121, 43);
+  }
+}
+
+.time {
+  margin: 0px 40px;
+  float: right;
+  color: $shrek;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 15px 10px 15px 50px;
+  background: #E67517;
+  font-size: 18px;
+  user-select: none;
+
+  &:nth-child(odd) {
+    background: rgb(218, 105, 13);
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  &.completed {
+    background: rgb(194, 83, 146);
+    color: rgb(90, 45, 8);
+    text-decoration: line-through;
+    z-index: 10;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      left: 0;
+      top: 0;
+      background-size: cover;
+      background-image: url("../img/done.png")
+    }
+  }
+}
+
+select {
+  height: 50px;
+  width: 220px;
+  border: none;
+  font-size: 20px;
+  font-family: Shrek;
+  padding: 10px;
+  background: #F5F5F5;
+  color:$shrek;
+  border-radius: 10px;
+  margin: 10px 10px;
+  cursor: pointer;
+  background: #E67517;
+}
+
+#add_button {
+  padding: 10px;
+  width: 100px;
+  border-radius: 10px;
+  background: #d9d9d9;
+  color: $shrek;
+  float: right;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.5s;
+  background: #E67517;
+
+  &:hover {
+    background-color: red;
+  }
+}
+
+input {
+  border: none;
+  height: 30px;
+  margin-left: 10px;
+  color: $shrek;
+  font-family: Shrek;
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  background: #F5F5F5;
+  float: left;
+  font-size: 16px;
+  background: #E67517;
+}
+
+label {
+  width: 100%;
+}
+
+
+.add_task_block {
+  text-align: center;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+
+
+#deadline {
+border-radius: 0 10px 10px 0;
+width: 15%;
+}
+
+::-webkit-input-placeholder { color: $shrek; }
+::-moz-placeholder          { color: $shrek; } /* Firefox 19+ */
+:-moz-placeholder           { color: $shrek; } /* Firefox 18- */
+:-ms-input-placeholder      { color: $shrek; }
+
